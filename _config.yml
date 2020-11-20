@@ -57,7 +57,7 @@ plugins:
 
 author:
   name   : "Randomblock1"
-  avatar : "/assets/images/bio-photo.jpg"
+  avatar : "/assets/images/bio-photo.png"
   bio    : "I do stuff sometimes"
   links:
     - label: "Website"
