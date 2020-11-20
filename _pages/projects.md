@@ -1,4 +1,4 @@
 ---
-permalink: /projects
+permalink: /projects/
 ---
 test
