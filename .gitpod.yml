@@ -2,4 +2,9 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: bundle install && bundle exec jekyll server
+  - init: bundle install
+    command: bundle exec jekyll server
+
+ports:
+  - port: 4000
+    onOpen: open-preview
