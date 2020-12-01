@@ -114,6 +114,4 @@ tag_archive:
 
 compress_html:
   clippings: all
-  ignore:
-    envs: development  # disable compression in dev environment
   profile: true
