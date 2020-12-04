@@ -43,8 +43,8 @@ Let's get started.
     Finally. It's time to get started.
     Use your favorite text editor to create start.sh: 
 
-```
-qemu-system-aarch64 -M virt -cpu host \
+    ```
+    qemu-system-aarch64 -M virt -cpu host \
         -smp 4 -m 2048 \
         -device qemu-xhci\
         -device usb-kbd\
@@ -61,7 +61,7 @@ qemu-system-aarch64 -M virt -cpu host \
         -vnc 0.0.0.0:15
     # Remember to set Windows.iso and virtio.iso to the names or paths of the ISO files you have. 
     # You can also remove the last line (-vnc ...) if you don't want to have a VNC connection open. VNC is useful for headless systems and remote controlling Windows. It's not neccesary though.
-```
+    ```
 
 8. Set Up Windows
 
@@ -73,21 +73,21 @@ qemu-system-aarch64 -M virt -cpu host \
 9. Optimize Windows
 
     Open Command prompt and run:
-```
-REM Disable Printing
-sc stop "Spooler"
-sc config "Spooler" start= disabled
-REM Disable Windows Search Indexing
-sc stop "WSearch"
-sc config "WSearch" start= disabled
-REM Disable Automatic Defragmentation
-schtasks /Delete /TN "\Microsoft\Windows\Defrag\ScheduledDefrag" /F
-REM Disable Pagefile
-wmic computersystem set AutomaticManagedPagefile=FALSE
-wmic pagefileset delete
-REM Disable Hibernation
-powercfg -h off
-```
+    ```
+    REM Disable Printing
+    sc stop "Spooler"
+    sc config "Spooler" start= disabled
+    REM Disable Windows Search Indexing
+    sc stop "WSearch"
+    sc config "WSearch" start= disabled
+    REM Disable Automatic Defragmentation
+    schtasks /Delete /TN "\Microsoft\Windows\Defrag\ScheduledDefrag" /F
+    REM Disable Pagefile
+    wmic computersystem set AutomaticManagedPagefile=FALSE
+    wmic pagefileset delete
+    REM Disable Hibernation
+    powercfg -h off
+    ```
 
 10. Change Display Resolution (optional)
 
