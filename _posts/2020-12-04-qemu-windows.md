@@ -43,7 +43,7 @@ Let's get started.
     Finally. It's time to get started.
     Use your favorite text editor to create start.sh: 
 
-    ```
+```
 qemu-system-aarch64 -M virt -cpu host \
         -smp 4 -m 2048 \
         -device qemu-xhci\
@@ -59,7 +59,7 @@ qemu-system-aarch64 -M virt -cpu host \
         -device ramfb \
         -enable-kvm \
         -vnc 0.0.0.0:15
-    ```
+```
 
     Remember to set Windows.iso and virtio.iso to the names or paths of the ISO files you have. You can also remove the last line (-vnc ...) if you don't want to have a VNC connection open. VNC is useful for headless systems and remote controlling Windows. It's not neccesary though.
 
@@ -76,7 +76,7 @@ qemu-system-aarch64 -M virt -cpu host \
 8. Optimize Windows
 
     Open Command prompt and run:
-    ```
+```
 REM Disable Printing
 sc stop "Spooler"
 sc config "Spooler" start= disabled
@@ -90,7 +90,7 @@ wmic computersystem set AutomaticManagedPagefile=FALSE
 wmic pagefileset delete
 REM Disable Hibernation
 powercfg -h off
-    ```
+```
 
 9. Change Display Resolutiom (optional)
 
