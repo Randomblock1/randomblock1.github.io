@@ -59,21 +59,18 @@ qemu-system-aarch64 -M virt -cpu host \
         -device ramfb \
         -enable-kvm \
         -vnc 0.0.0.0:15
+    # Remember to set Windows.iso and virtio.iso to the names or paths of the ISO files you have. 
+    # You can also remove the last line (-vnc ...) if you don't want to have a VNC connection open. VNC is useful for headless systems and remote controlling Windows. It's not neccesary though.
 ```
-
-    - Remember to set Windows.iso and virtio.iso to the names or paths of the ISO files you have. You can also remove the last line (-vnc ...) if you don't want to have a VNC connection open. VNC is useful for headless systems and remote controlling Windows. It's not neccesary though.
-
-    - Next, run ```chmod 755 start.sh```.
 
 8. Set Up Windows
 
-    Run ```./start.sh``` and install Windows. When it can't find any storage devices to install to, choose "Install Drivers", select the VirtIO driver disk, and open viostor/w10/ARM64. Then, install Windows as normal.
+    Run ```chmod 755 start.sh && ./start.sh``` and install Windows. 
+    When it can't find any storage devices to install to, choose "Install Drivers", select the VirtIO driver disk, and open viostor/w10/ARM64. 
+    Also, do the same thing and install the NetKVM/w10/ARM64 driver as well.
+    Then, install Windows as normal.
 
-9. Set Up VirtIO Networking
-
-    Open the command prompt and enter ```bcdedit /set testsigning on```. Reboot, then open Device Manager. Install the driver at the VirtIO driver disk: NetKVM/w10/ARM64.
-
-10. Optimize Windows
+9. Optimize Windows
 
     Open Command prompt and run:
 ```
@@ -92,7 +89,7 @@ REM Disable Hibernation
 powercfg -h off
 ```
 
-11. Change Display Resolution (optional)
+10. Change Display Resolution (optional)
 
     If you built QEMU from source or your QEMU version is higher than 5.1.0, you can increase your display resolution.
 
@@ -101,7 +98,7 @@ powercfg -h off
 
     Then, set your display resolution up to 1024x768 in Device Manager > OVMF Platform Configuration. It's limited to a relatively small resolution, due to standard VGA support not being supported, and having to use ramfb instead. This may change in the future, but we have to use ramfb for now.
 
-12. Done!
+11. Done!
     You're now done installing Windows 10 in a Raspberry Pi KVM!
 
 This guide is based on [this one by Kitsunemi.](https://kitsunemimi.pw/notes/posts/running-windows-10-for-arm64-in-a-qemu-virtual-machine.html)
