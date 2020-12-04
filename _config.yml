@@ -122,7 +122,7 @@ tag_archive:
 
 compress_html:
   clippings: all
-  profile: true
+  profile: false
 
 collections:
   projects:
