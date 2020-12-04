@@ -61,9 +61,9 @@ qemu-system-aarch64 -M virt -cpu host \
         -vnc 0.0.0.0:15
 ```
 
-    Remember to set Windows.iso and virtio.iso to the names or paths of the ISO files you have. You can also remove the last line (-vnc ...) if you don't want to have a VNC connection open. VNC is useful for headless systems and remote controlling Windows. It's not neccesary though.
+    - Remember to set Windows.iso and virtio.iso to the names or paths of the ISO files you have. You can also remove the last line (-vnc ...) if you don't want to have a VNC connection open. VNC is useful for headless systems and remote controlling Windows. It's not neccesary though.
 
-    Next, run ```chmod 755 start.sh```.
+    - Next, run ```chmod 755 start.sh```.
 
 8. Set Up Windows
 
