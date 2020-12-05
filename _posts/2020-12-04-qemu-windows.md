@@ -50,7 +50,7 @@ Let's get started.
         -device usb-kbd\
         -device usb-tablet \
         -drive file=disk.qcow2,if=virtio \
-        -nic user,model=virtio \
+        -nic user,model=virtio-net-pci \
         -drive file="Windows.iso",media=cdrom,if=none,id=cdrom \
         -device usb-storage,drive=cdrom \
         -drive file="virtio.iso",media=cdrom,if=none,id=drivers \
