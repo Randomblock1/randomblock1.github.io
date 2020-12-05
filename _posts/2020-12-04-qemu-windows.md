@@ -93,6 +93,8 @@ Let's get started.
 
     If you built QEMU from source or your QEMU version is higher than 5.1.0, you can increase your display resolution.
 
+    Extract vars-template-pflash.raw from the EDK2 RPM file from earlier.
+
     Add the following somewhere in your start.sh:
     ```-drive file=vars-template-pflash.raw,if=pflash,index=1```
 
