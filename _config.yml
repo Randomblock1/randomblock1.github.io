@@ -128,3 +128,8 @@ collections:
   projects:
     output: true
     permalink: /:collection/:path/
+
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "UA-163381112-2"
