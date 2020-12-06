@@ -25,7 +25,7 @@ Let's get started.
 
 3. Make the newest QEMU (optional)
 
-    To make sure you get the newest features and bugfixes, compile QEMU from tbe latest source. Visit [the QEMU download page](https://www.qemu.org/download/) and and follow the build instructions under the Source tab. You'll want to uninstall your distro's QEMU packages and run ```sudo make install``` once you're done building QEMU.
+    To make sure you get the newest features and bugfixes, compile QEMU from tbe latest source. Visit [the QEMU download page](https://www.qemu.org/download/) and and follow the build instructions under the Source tab. You'll want to uninstall your distribution's QEMU packages and run ```sudo make install``` once you're done building QEMU.
 4. Make the QCOW2 disk file
 
     Go run ```qemu-img create -f qcow2 disk.qcow2 32G``` on your Raspberry Pi, wherever you want to store the files. It must be at least 24GB, as that's about how big Windows is.
