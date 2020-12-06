@@ -1,0 +1,8 @@
+Checkra1n
+checkra1n
+QEMU
+x86
+x86_64
+ARM
+ARM64
+KVM
