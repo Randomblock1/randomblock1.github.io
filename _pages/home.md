@@ -8,21 +8,21 @@ header:
 excerpt: >
   I do stuff sometimes. Here is what I'm doing!<br />
 feature_row:
-  - image_path: /assets/images/mm-customizable-feature.png
+  - image_path: /assets/images/checkra1n-linux.png
     alt: "checkra1n-linux"
     title: "checkra1n-linux"
     excerpt: "Simple and fast installer for checkra1n on all Linux platforms"
     url: "/projects/checkra1n-linux"
     btn_class: "btn--primary"
     btn_label: "Learn more"
-  - image_path: /assets/images/mm-responsive-feature.png
+  - image_path: /assets/images/randomsource.png
     alt: "randomsource"
     title: "RandomSource"
     excerpt: "A AltStore source with tons of goodies."
     url: "/projects/randomsource/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
-  - image_path: /assets/images/mm-free-feature.png
+  - image_path: /assets/images/repo.png
     alt: "Repo"
     title: "Jailbreak Repo"
     excerpt: "Personal jailbreak APT repository."
