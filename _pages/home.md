@@ -8,7 +8,7 @@ header:
 excerpt: >
   I do stuff sometimes. Here is what I'm doing!<br />
 feature_row:
-  - image_path: /assets/images/checkra1n-linux.png
+  - image_path: /assets/images/checkra1n.png
     alt: "checkra1n-linux"
     title: "checkra1n-linux"
     excerpt: "Simple and fast installer for checkra1n on all Linux platforms"
