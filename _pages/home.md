@@ -15,7 +15,7 @@ feature_row:
     url: "/projects/checkra1n-linux"
     btn_class: "btn--primary"
     btn_label: "Learn more"
-  - image_path: /assets/images/randomsource.png
+  - image_path: /assets/images/randomsource.svg
     alt: "randomsource"
     title: "RandomSource"
     excerpt: "A AltStore source with tons of goodies."
