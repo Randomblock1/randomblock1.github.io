@@ -1,6 +1,7 @@
 ---
 title: "RandomSource for AltStore"
 excerpt: "Installing tweaked apps without jailbreak has never been easier!"
+permalink: /projects/randomsource/
 ---
 RandomSource is a source for AltStore. It provides the app with information and files for installing other tweaked apps that you can’t get anywhere else, since the App Store has very restrictive guidelines.
 

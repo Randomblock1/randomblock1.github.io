@@ -1,6 +1,7 @@
 ---
 title: "Jailbreak Repo"
 excerpt: "Various tweaks and tools"
+permalink: /projects/repo/
 ---
 The jailbreak repo is based om [Silica](hytps://github.com/shugabuga/silica), a free open-source repository template.
 
