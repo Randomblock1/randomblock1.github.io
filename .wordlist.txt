@@ -97,3 +97,11 @@ repo
 mmistakes
 distro
 randomsource
+KernBypass
+Neofetch
+api
+cydia
+hytps
+io
+saurik
+shugabuga
