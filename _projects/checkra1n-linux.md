@@ -1,6 +1,7 @@
 ---
 title: "Checkra1n-Linux"
 excerpt: "Making checkra1n easy to install on Linux systems everywhere"
+permalink: /projects/checkra1n-linux/
 ---
 ## A simple all-platform checkra1n installer
 This script works on x86, x86\_64, ARM and ARM64! Why is this important? The default method of installing checkra1n is with a Debian repo. It should be simple, right?

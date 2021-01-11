@@ -1,6 +1,7 @@
 ---
 title: "This Website"
 excerpt: "You're looking at it right now."
+permalink: /projects/website/
 ---
 
 This website uses [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes).

@@ -12,7 +12,7 @@ feature_row:
     alt: "checkra1n-linux"
     title: "checkra1n-linux"
     excerpt: "Simple and fast installer for checkra1n on all Linux platforms"
-    url: "/projects/checkra1n-linux"
+    url: "/projects/checkra1n-linux/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: /assets/images/randomsource.svg
