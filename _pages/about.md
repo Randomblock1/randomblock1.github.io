@@ -3,4 +3,24 @@ permalink: /about/
 title: "About"
 ---
 
-Under construction.
+I'm just a high school student who enjoys making simple, small things. A website to play games at school, a script to jailbreak real easy, a way to build iOS tweaks without a Mac, and some other small things.
+
+I'm also into cryptocurrency. Speaking of which, that's the only way to donate to me (damn you, PayPal age requirements!).
+
+<details>
+  <summary>View addresses</summary>
+
+BTC  3FktLLGKKG6Qi1px1U7ADLURKTRwYcHy7q
+
+BCH  1JrCxen5MLuUbtwch8dfJ3d6WWswVDqSWP
+
+DOGE DSNthiejZjMvaLwXQFjCixSjaQsL199ySA
+
+ETH  0x5288C85b1B24BF8Ed0fD445715D6AabF63Cf0A0b
+
+LTC  MGS4jeGDWF1wQp4DwTtyw46nyWwArYutYy
+
+XMR  48mZgqmLKjr97JoKadWeqFEqZk3fktx749215krxksMvgVcRNVaNkeA1Gpvi9NqHRD9aPwbSjiWr6gJd1KuVYd5W7bFHvNA
+
+![Thank you!](https://bit.ly/39NvSSn)
+</details>
