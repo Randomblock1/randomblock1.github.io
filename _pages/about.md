@@ -10,17 +10,17 @@ I'm also into cryptocurrency. Speaking of which, that's the only way to donate t
 <details>
   <summary>View addresses</summary>
 
-BTC  3FktLLGKKG6Qi1px1U7ADLURKTRwYcHy7q
-
-BCH  1JrCxen5MLuUbtwch8dfJ3d6WWswVDqSWP
-
-DOGE DSNthiejZjMvaLwXQFjCixSjaQsL199ySA
-
-ETH  0x5288C85b1B24BF8Ed0fD445715D6AabF63Cf0A0b
-
-LTC  MGS4jeGDWF1wQp4DwTtyw46nyWwArYutYy
-
-XMR  48mZgqmLKjr97JoKadWeqFEqZk3fktx749215krxksMvgVcRNVaNkeA1Gpvi9NqHRD9aPwbSjiWr6gJd1KuVYd5W7bFHvNA
-
-![Thank you!](https://bit.ly/39NvSSn)
+- BTC  3FktLLGKKG6Qi1px1U7ADLURKTRwYcHy7q
+<br>
+- BCH  1JrCxen5MLuUbtwch8dfJ3d6WWswVDqSWP
+<br>
+- DOGE DSNthiejZjMvaLwXQFjCixSjaQsL199ySA
+<br>
+- ETH  0x5288C85b1B24BF8Ed0fD445715D6AabF63Cf0A0b
+<br>
+- LTC  MGS4jeGDWF1wQp4DwTtyw46nyWwArYutYy
+<br>
+- XMR  48mZgqmLKjr97JoKadWeqFEqZk3fktx749215krxksMvgVcRNVaNkeA1Gpvi9NqHRD9aPwbSjiWr6gJd1KuVYd5W7bFHvNA
+<br>
+<img src="https://bit.ly/39NvSSn" alt="Thank you!">
 </details>
