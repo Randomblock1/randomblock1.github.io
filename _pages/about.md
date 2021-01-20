@@ -24,3 +24,5 @@ I'm also into cryptocurrency. Speaking of which, that's the only way to donate t
 <br>
 <img src="https://bit.ly/39NvSSn" alt="Thank you!">
 </details>
+
+If you'd like to get in contact with me, visit [my Twitter](https://twitter.com/randomblock1_) or email me at [randomblock1@pm.me](mailto:randomblock1@pm.me)
