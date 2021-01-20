@@ -10,19 +10,20 @@ I'm also into cryptocurrency. Speaking of which, that's the only way to donate t
 <details>
   <summary>View addresses</summary>
 
-- BTC  3FktLLGKKG6Qi1px1U7ADLURKTRwYcHy7q
+BTC  3FktLLGKKG6Qi1px1U7ADLURKTRwYcHy7q
 <br>
-- BCH  1JrCxen5MLuUbtwch8dfJ3d6WWswVDqSWP
+BCH  1JrCxen5MLuUbtwch8dfJ3d6WWswVDqSWP
 <br>
-- DOGE DSNthiejZjMvaLwXQFjCixSjaQsL199ySA
+DOGE DSNthiejZjMvaLwXQFjCixSjaQsL199ySA
 <br>
-- ETH  0x5288C85b1B24BF8Ed0fD445715D6AabF63Cf0A0b
+ETH  0x5288C85b1B24BF8Ed0fD445715D6AabF63Cf0A0b
 <br>
-- LTC  MGS4jeGDWF1wQp4DwTtyw46nyWwArYutYy
+LTC  MGS4jeGDWF1wQp4DwTtyw46nyWwArYutYy
 <br>
-- XMR  48mZgqmLKjr97JoKadWeqFEqZk3fktx749215krxksMvgVcRNVaNkeA1Gpvi9NqHRD9aPwbSjiWr6gJd1KuVYd5W7bFHvNA
+XMR  48mZgqmLKjr97JoKadWeqFEqZk3fktx749215krxksMvgVcRNVaNkeA1Gpvi9NqHRD9aPwbSjiWr6gJd1KuVYd5W7bFHvNA
 <br>
 <img src="https://bit.ly/39NvSSn" alt="Thank you!">
 </details>
+<br>
 
 If you'd like to get in contact with me, visit [my Twitter](https://twitter.com/randomblock1_) or email me at [randomblock1@pm.me](mailto:randomblock1@pm.me)
