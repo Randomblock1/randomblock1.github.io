@@ -18,14 +18,14 @@ feature_row:
   - image_path: /assets/images/randomsource.svg
     alt: "randomsource"
     title: "RandomSource"
-    excerpt: "A AltStore source with tons of goodies."
+    excerpt: "An AltStore source with tons of extra applications."
     url: "/projects/randomsource/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: /assets/images/repo.png
     alt: "Repo"
     title: "Jailbreak Repo"
-    excerpt: "Personal jailbreak APT repository."
+    excerpt: "Jailbreak APT repository for tweaks and customization."
     url: "/projects/repo/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
