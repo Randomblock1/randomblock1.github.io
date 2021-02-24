@@ -15,9 +15,7 @@ Prerequisites:
 Note: if your app is downloadable from the App Store, just use [the iMazing method](https://www.theverge.com/2020/11/18/21574207/how-to-install-run-any-iphone-ipad-app-m1-mac) instead. It is a LOT easier, you just double-click a file and go. This is meant to be use for IPA files that are NOT obtainable on the App Store.
 
 1. Download a wrapper
-  The way MacOS runs iPhone apps is by downloading the app from the Appstore and manipulating its metadata into something MacOS can read. It does this by installing a "wrapper" for iOS apps. We will need a wrapper to run our app, too.
-
-  The first thing you need to do is download an iOS AppStore app. You'll need this to generate the wrapper, but it can be uninstalled after we're done. I'm using a podcast app called Overcast, but most other iPhone apps will work. Enter the macOS App Store, and search for your app. Make sure to select "iPhone and iPad apps" instead of "macOS apps", as we need an iOS app to use as our wrapper. Simply download it and proceed to step 2.
+  The way MacOS runs iPhone apps is by downloading the app from the Appstore and manipulating its metadata into something MacOS can read. It does this by installing a "wrapper" for iOS apps. We will need a wrapper to run our app, too. The first thing you need to do is download an iOS AppStore app. You'll need this to generate the wrapper, but it can be uninstalled after we're done. I'm using a podcast app called Overcast, but most other iPhone apps will work. Enter the macOS App Store, and search for your app. Make sure to select "iPhone and iPad apps" instead of "macOS apps", as we need an iOS app to use as our wrapper. Simply download it and proceed to step 2.
 
 2. Copy the wrapper
   Open the Terminal application. Type ```cd /Applications/``` and then ```cp -R [the app you just downloaded].app ~/Documents```. DON'T DO THIS VIA FINDER, it will mess up the wrapper.
@@ -29,9 +27,7 @@ Note: if your app is downloadable from the App Store, just use [the iMazing meth
   Then, ```cd``` to wherever your downloaded your IPA file, and unzip it with ```unzip YOURIPA.ipa```. Using Finder, copy the app inside the Payload folder into our wrapper in ~/Documents.
 
 5. Modify the wrapper
-  Right-click the wrapper we copied into Documents and select "Show Package Contents." Delete WrappedBundle, and move into Wrapper. Copy the app extracted from the IPA into this folder, and delete the original app that was in there. Do not delete the plist files.
-
-  Leave BundleMetadata.plist alone, as we don't need to change it. Modify iTunesMetadata.plist, replacing the softwareVersionBundleId, bundleShortVersionString, itemName, and artistName with the proper information that can be found in your app's Info.plist (again, use Show Package Contents). While changing these are all recommended, the only one you REALLY need to change is itemName and bundleShortVersionString.
+  Right-click the wrapper we copied into Documents and select "Show Package Contents." Delete WrappedBundle, and move into Wrapper. Copy the app extracted from the IPA into this folder, and delete the original app that was in there. Do not delete the plist files. Leave BundleMetadata.plist alone, as we don't need to change it. Modify iTunesMetadata.plist, replacing the softwareVersionBundleId, bundleShortVersionString, itemName, and artistName with the proper information that can be found in your app's Info.plist (again, use Show Package Contents). While changing these are all recommended, the only one you REALLY need to change is itemName and bundleShortVersionString.
 
 6. Fix the wrapper
   Remember how we deleted WrappedBundle? Well, we actually do need that to run, but we couldn't use the one already made. It's a simple fix though. Open Terminal and ```cd``` into the first wrapper folder (~/Documents/WrapperApp.app). Run ```ln -S Wrapper/YourIOSApp.app WrappedBundle```.
