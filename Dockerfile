@@ -17,3 +17,5 @@ RUN jekyll build && cp -r ./_site /build
 FROM nginx:alpine AS nginx
 
 COPY --from=builder /build /usr/share/nginx/html
+
+EXPOSE 80
