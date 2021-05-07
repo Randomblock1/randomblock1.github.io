@@ -20,8 +20,6 @@ ETH  0x5288C85b1B24BF8Ed0fD445715D6AabF63Cf0A0b
 <br>
 LTC  MGS4jeGDWF1wQp4DwTtyw46nyWwArYutYy
 <br>
-XMR  48mZgqmLKjr97JoKadWeqFEqZk3fktx749215krxksMvgVcRNVaNkeA1Gpvi9NqHRD9aPwbSjiWr6gJd1KuVYd5W7bFHvNA
-<br>
 <img src="https://bit.ly/39NvSSn" alt="Thank you!">
 </details>
 <br>
