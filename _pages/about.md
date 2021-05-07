@@ -5,7 +5,7 @@ title: "About"
 
 I'm just a high school student who enjoys making simple, small things. A website to play games at school, a script to jailbreak real easy, a way to build iOS tweaks without a Mac, and some other small things.
 
-I'm also into cryptocurrency. Speaking of which, that's the only way to donate to me (damn you, PayPal age requirements!).
+I'm also into cryptocurrency. Speaking of which, that's the only way to donate to me (those dang PayPal age requirements!).
 
 <details>
   <summary>View addresses</summary>
