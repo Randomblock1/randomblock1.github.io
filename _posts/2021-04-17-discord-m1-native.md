@@ -44,4 +44,6 @@ Time to get started. You will need:
 
 6. Run it!
 
-Everything should work just like the desktop app, while being about 2 times faster.
+Everything should work just like the desktop app, while being about 2 times faster. Notifications? Turn them on in the settings. Voice chat? Works great. Unfortunately, game statuses won't work, but you can update your status manually.
+
+One thing to note, though; sometimes the Discord web app will update itself and break read functionality (specifically, it won't mark a channel as 'read' when you scroll to the very bottom). This can be fixed by simply running Nativefier again and installing the newly generated app.
