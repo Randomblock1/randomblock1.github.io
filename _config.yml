@@ -54,6 +54,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-seo-tag
 
 author:
   name   : "Randomblock1"
@@ -133,6 +134,3 @@ collections:
 #  provider: "google-gtag"
 #  google:
 #    tracking_id: "UA-163381112-2"
-
-plugins:
-  - jekyll-seo-tag
