@@ -133,3 +133,6 @@ collections:
 #  provider: "google-gtag"
 #  google:
 #    tracking_id: "UA-163381112-2"
+
+plugins:
+  - jekyll-seo-tag
