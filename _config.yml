@@ -139,4 +139,4 @@ comments:
   provider  : "staticman_v2"
   staticman:
     branch    : "master"
-    endpoint  : http://13.67.180.73:8008/v3/entry/github/
+    endpoint  : "http://13.67.180.73:8008/v3/entry/github/"
