@@ -21,6 +21,7 @@ twitter_username: randomblock1_
 github_username: randomblock1
 minimal_mistakes_skin: dark
 search: true
+repository: "randomblock1/randomblock1.github.io"
 
 # Build settings
 markdown: kramdown
@@ -134,3 +135,8 @@ collections:
 #  provider: "google-gtag"
 #  google:
 #    tracking_id: "UA-163381112-2"
+comments:
+  provider  : "staticman_v2"
+  staticman:
+    branch    : "master"
+    endpoint  : http://13.67.180.73:8008/v3/entry/github/
