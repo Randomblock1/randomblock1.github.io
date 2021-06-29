@@ -135,8 +135,8 @@ collections:
 #  provider: "google-gtag"
 #  google:
 #    tracking_id: "UA-163381112-2"
-comments:
-  provider  : "staticman_v2"
-  staticman:
-    branch    : "master"
-    endpoint  : "http://13.67.180.73/v3/entry/github/"
+#comments:
+#  provider  : "staticman_v2"
+#  staticman:
+#    branch    : "master"
+#    endpoint  : "http://13.67.180.73/v3/entry/github/"
