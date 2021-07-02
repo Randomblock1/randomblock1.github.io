@@ -3,9 +3,11 @@ permalink: /about/
 title: "About"
 ---
 
-I'm just a high school student who enjoys making simple, small things. A website to play games at school, a script to jailbreak real easy, a way to build iOS tweaks without a Mac, and some other small things.
+I'm just a high school student who enjoys making simple, small things. You paid for your phone, so why can't you use it how you want?
 
-I'm also into cryptocurrency. Speaking of which, that's the only way to donate to me (those dang PayPal age requirements!).
+I'm also into cryptocurrency. Speaking of which, that's the only way to donate to me.
+
+###### This donation is not tax-exempt. Duh.
 
 <details>
   <summary>View addresses</summary>
