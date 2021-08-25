@@ -7,7 +7,7 @@ I'm just a high school student who enjoys making simple, small things. You paid 
 
 I'm also into cryptocurrency. Speaking of which, that's the only way to donate to me.
 
-###### This donation is not tax-exempt. Duh.
+You can also send to randomblock1.crypto if your wallet supports Unstoppable Domains.
 
 <details>
   <summary>View addresses</summary>
