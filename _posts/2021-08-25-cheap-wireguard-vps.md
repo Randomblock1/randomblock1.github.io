@@ -25,7 +25,9 @@ You have 2 options:
 
 First option: if you will use less than 3TB of bandwidth monthly and want to use your VPS for literally anything else (like a website), RackNerd sells 1GB RAM servers with 3TB 1Gbps monthly bandwidth for $1/month. I have no clue how that can possibly be profitable, but I digress. Go to the [RackNerd](https://my.racknerd.com/cart.php?a=add&pid=358) site to purchase it.
 
-Second option: 3TB of data should be more than enough for most people, but if you absolutely _need_ more data (and are willing to sacrifice lots of RAM and therefore possibly make your adblocker slower) you can order a VPS from [CatalystHost](https://portal.catalysthost.com/cart.php?a=add&pid=174) instead. It has barely enough RAM for the adblocker, but it should still work.
+~~Second option: 3TB of data should be more than enough for most people, but if you absolutely _need_ more data (and are willing to sacrifice lots of RAM and therefore possibly make your adblocker slower) you can order a VPS from [CatalystHost](https://portal.catalysthost.com/cart.php?a=add&pid=174) instead. It has barely enough RAM for the adblocker, but it should still work.~~
+
+Edit: I have purchased one of their servers, and the connection is just really really spotty and bad. 90% of the time you just straight-up can't connect to it, and it seems like they're allocating 1 IP to multiple VPS instances??? Don't bother with CatalystHost, unfortuately if you can't connect to it, a VPN isn't going to work. RackNerd really is so much better.
 
 Go ahead and purchase one of those virtual servers, and select Debian as your operating system if you can. This tutorial is designed for Debian, but it should work with other OSes too.
 
