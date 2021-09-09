@@ -1,0 +1,18 @@
+
+.scroll-top {
+	position: fixed;
+	bottom: -40px;
+	right: 40px;
+	color: #fff;
+	font-size: 50px;
+	cursor: pointer;
+	z-index: 100000;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.5s;
+}
+.scroll-top.active {
+	bottom: 40px;
+	visibility: visible;
+	opacity: 1;
+}

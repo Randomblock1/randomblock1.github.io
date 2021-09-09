@@ -13,6 +13,8 @@ layout: compress
   <head>
     {% include head.html %}
     {% include head/custom.html %}
+    <link rel="stylesheet" type="text/css" href="/assets/css/scroll.css" media="screen" />
+    <script async src="/assets/js/scroll-to-top.js"></script>
     <script async src="https://arc.io/widget.min.js#FyGLkjcM"></script>
     <script data-goatcounter="https://randomblock1.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   </head>
@@ -21,6 +23,7 @@ layout: compress
     {% include_cached skip-links.html %}
     {% include_cached browser-upgrade.html %}
     {% include_cached masthead.html %}
+    <i class="fas fa-arrow-alt-circle-up scroll-top" onclick= scrollToTop();></i>
 
     <div class="initial-content">
       {{ content }}
