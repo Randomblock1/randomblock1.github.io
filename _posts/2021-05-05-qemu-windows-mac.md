@@ -17,9 +17,9 @@ Let's get started.
 
     Go visit [the Windows for ARM download page](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewARM64) and sign in with a Microsoft account. Then, download the VHDX file.
 
-3. Build QEMU with HV.F support 
+3. Build QEMU with HV.F support
 
-    ```
+    ```bash
     brew install ninja pkgconfig glib pixman
     git clone https://github.com/qemu/qemu
     cd qemu
@@ -35,7 +35,7 @@ Let's get started.
 
     Enable extra resolutions for ramfb
 
-    ```
+    ```bash
     curl -L https://git.io/J3w5c | tar xz
     dd if=/dev/zero of=pflash0.img bs=1m count=64
     dd if=/dev/zero of=pflash1.img bs=1m count=64
@@ -53,7 +53,7 @@ Let's get started.
     Once it's done, delete the original VHDX file, as we no longer need it.
 
 5. How to take a QCOW2 snapshot
-    
+
     We are going to take a snapshot of our QCOW2 file, just in case anything goes wrong during installation. That way, we won't have to redownload the VHDX file.
 
     `qemu-img snapshot disk.qcow2 -c brand_new`
@@ -68,13 +68,12 @@ Let's get started.
 
     Download [the LATEST VirtIO driver ISO for Windows](https://github.com/virtio-win/virtio-win-pkg-scripts/blob/master/README.md).
 
-
 7. Create start script
 
     Finally. It's time to get started.
-    Use your favorite text editor to create start.sh: 
+    Use your favorite text editor to create start.sh:
 
-    ```
+    ```bash
     qemu-system-aarch64 \
         -accel hvf \
         -cpu host \
@@ -96,8 +95,8 @@ Let's get started.
 
 8. Set Up Windows
 
-    Run `chmod 755 start.sh && ./start.sh` to run Windows. 
-    
+    Run `chmod 755 start.sh && ./start.sh` to run Windows.
+
     When QEMU first starts up, select the window and press ESC before it starts booting.
 
     Then, set your display resolution up to 1440x900 in Device Manager > OVMF Platform Configuration (or any other resolution you want to use). It's limited to a relatively small resolution, due to standard VGA for ARM64 not being supported, and having to use ramfb instead. This may change in the future, but we have to use ramfb for now.
@@ -114,7 +113,7 @@ Let's get started.
 
     Right click 'Unknown device' then select Update Drivers>Browse my computer for drivers>D:\NetKVM\w10\ARM64. Click next to install the driver. Once that's done, shutdown, take a snapshot, and remove the following files from your start script:
 
-    ```
+    ```bash
     -drive file="virtio.iso",media=cdrom,if=none,id=drivers \
     -device usb-storage,drive=drivers \
     ```
@@ -124,7 +123,8 @@ Let's get started.
     Windows isn't really expecting to be run inside a virtual machine, so we're going to add some small tweaks to make it faster.
 
     Open Command prompt and run:
-    ```
+
+    ```bash
     REM Disable Printing
     sc stop "Spooler"
     sc config "Spooler" start= disabled
@@ -138,10 +138,10 @@ Let's get started.
     ```
 
     If you want to save some space, if you've taken a second snapshot of the fully set-up virtual machine, you can run
-    
+
     `qemu-img snapshot disk.qcow2 -d brand_new`
 
     to delete the first snapshot.
 
-11. Done!
+10. Done!
     You're now done installing Windows 10 on your M1 Mac! It's not terribly fast, but it works well and is fast enough to do most things.
