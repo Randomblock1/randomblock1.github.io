@@ -1,6 +1,6 @@
 ---
 title: "Jailbreak Repo"
-excerpt: "Various tweaks and tools"
+excerpt: "Various tweaks, tools, and customizations for jailbroken iPhones."
 permalink: /projects/repo/
 ---
 The jailbreak repo is based on [Silica](hytps://github.com/shugabuga/silica), a free open-source repository template.

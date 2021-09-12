@@ -1,9 +1,10 @@
 ---
 title: "Checkra1n-Linux"
-excerpt: "Making checkra1n easy to install on Linux systems everywhere"
+excerpt: "Making the checkra1n jailbreak easy to install on Linux systems everywhere. Works on Raspberry Pi & more!"
 permalink: /projects/checkra1n-linux/
 ---
 ## A simple all-platform checkra1n installer
+
 This script works on x86, x86\_64, ARM and ARM64! Why is this important? The default method of installing checkra1n is with a Debian repo. It should be simple, right?
 
 Nope. The checkra1n official repo _only contains packages for x86_64_. Compared to all the devices that can run checkra1n, that's not nearly enough.
