@@ -3,9 +3,10 @@ title: "Mining ETH with a GTX 1660 Super for Massive Profit"
 categories:
   - blog
 tags:
-  - crypto
+  - Cryptocurrency
 ---
 ## Intro
+
 Mining Ethereum is _very_ profitable right now. 1 ETH is worth about $1,000 right now, and it’s mainly mined by using GPUs or ASICs (purpose-built machines that can only do 1 thing, but they do that 1 thing blazing fast), or by simply having lots of ETH for staking in the “Beacon Chain” of Ethereum. You can’t currently withdraw Beacon Chain staked ETH, so mining with computing power is currently the only way.
 
 GPUs are affordable and considerably fast for mining Ethereum. Sure, ASICs are faster, but bang-for-buck wise GPUs are pretty good and already widely available (and cheap). The new Nvidia RTX 3000 series cards (especially the 3060) are INCREDIBLE for mining, which is why they’ve been out of stock for a whole month.

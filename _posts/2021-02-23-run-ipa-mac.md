@@ -8,9 +8,10 @@ tags:
 IPA files contain iPhone apps. Some of them are from the App Store, which Macs can install by simply double-clicking. But what if you want to install an app you compiled using Xcode yourself, or an IPA you download off the Internet? Previously, there was no way to do this, but I've figured out a workaround to run any IPA file on a M1 Mac. And I mean ANY app. Especially the Non-Appstore ones.
 
 Prerequisites:
-  - M1 Mac
-  - An IPA file you want to install (not from the App Store)
-  - 5 mins of time
+
+- M1 Mac
+- An IPA file you want to install (not from the App Store)
+- 5 mins of time
 
 Note: if your app is downloadable from the App Store, just use [the iMazing method](https://www.theverge.com/2020/11/18/21574207/how-to-install-run-any-iphone-ipad-app-m1-mac) instead. It is a LOT easier, you just double-click a file and go. This is meant to be use for IPA files that are NOT obtainable on the App Store.
 

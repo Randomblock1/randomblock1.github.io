@@ -12,9 +12,9 @@ Let's get started.
 
 1. Prerequisites
 
-- QEMU
-- 64-bit Kernel (NOT default in Raspbian yet, run `getconf LONG_BIT` to check)
-- At least 32GB of free space
+   - QEMU
+   - 64-bit Kernel (NOT default in Raspbian yet, run `getconf LONG_BIT` to check)
+   - At least 32GB of free space
 
 2. Get the ISO
 
@@ -40,9 +40,9 @@ Let's get started.
 7. Create start script
 
     Finally. It's time to get started.
-    Use your favorite text editor to create start.sh: 
+    Use your favorite text editor to create start.sh:
 
-    ```
+    ```bash
     qemu-system-aarch64 \
         -M virt,virtualization=true \
         -cpu host \
@@ -66,7 +66,7 @@ Let's get started.
 
 8. Set Up Windows
 
-    Run `chmod 755 start.sh && ./start.sh` and install Windows. 
+    Run `chmod 755 start.sh && ./start.sh` and install Windows.
     When it can't find any storage devices to install to, choose "Install Drivers", select the VirtIO driver disk, and open viostor/w10/ARM64. Install the driver, then repeat the same process for the NetKVM/w10/ARM64 driver.
     Continue and install Windows as normal.
 
@@ -75,7 +75,8 @@ Let's get started.
     Windows isn't really expecting to be run on a low-end virtualized device, so we're going to add some small tweaks to make it faster.
 
     Open Command prompt and run:
-    ```
+
+    ```bash
     REM Disable Printing
     sc stop "Spooler"
     sc config "Spooler" start= disabled

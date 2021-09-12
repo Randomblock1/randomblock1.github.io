@@ -14,6 +14,7 @@ This means we have to take the problem into our own hands. Luckily, there's alre
 Enter [Nativefier](https://github.com/nativefier/nativefier). Nativefier creates an Electron app from a webpage, which is already amazing, but it also allows us to inject our own code! This will allow us to imitate pretty much all features in the actual MacOS version and add them to our web version.
 
 Time to get started. You will need:
+
 - M1 Mac (otherwise just use the normal Discord app)
 - [Homebrew](https://brew.sh)
 - [This Discord icon](https://media.macosicons.com/parse/files/macOSicons/8bd2d46228e7ecc74e67901948a8df93_Discord.icns) and save it as 'discord.icns'
@@ -27,18 +28,19 @@ Time to get started. You will need:
   `brew install nativefier`
 
 4. Run the following command:
-  ```
-  nativefier \
-  --background-color '#23272A' \
-  --browserwindow-options '{ "fullscreenable": "true", "simpleFullscreen": "false" }' \
-  --counter \
-  --darwin-dark-mode-support \
-  --enable-es3-apis \
-  --icon discord.icns \
-  --inject discord.js \
-  --title-bar-style hiddenInset \
-  https://discord.com/app
-  ```
+
+    ```bash
+    nativefier \
+    --background-color '#23272A' \
+    --browserwindow-options '{ "fullscreenable": "true", "simpleFullscreen": "false" }' \
+    --counter \
+    --darwin-dark-mode-support \
+    --enable-es3-apis \
+    --icon discord.icns \
+    --inject discord.js \
+    --title-bar-style hiddenInset \
+    https://discord.com/app
+    ```
 
 5. Move Discord-darwin-arm64/Discord.app into your /Applications folder
 
