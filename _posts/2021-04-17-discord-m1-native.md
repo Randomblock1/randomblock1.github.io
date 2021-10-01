@@ -20,6 +20,9 @@ Time to get started. You will need:
 - [This Discord icon](https://media.macosicons.com/parse/files/macOSicons/8bd2d46228e7ecc74e67901948a8df93_Discord.icns) and save it as 'discord.icns'
 - [The discord.js script](https://gist.github.com/Randomblock1/b8cd3948ce0b4688b874f2643a2a6941)
 
+WARNING! As of 10/1/21, the script has to be updated! Notifications may not work!
+{: .notice--warning}
+
 1. Open up a terminal
 
 2. `cd` to where you downloaded the icon and discord.js (probably `~/Downloads`)
