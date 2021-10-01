@@ -5,19 +5,17 @@ categories:
 tags:
   - Cryptocurrency
 ---
-## Intro
+Mining Ethereum is _very_ profitable right now. 1 ETH is worth about $3,000 right now, and it’s mainly mined by using GPUs for gaming or ASICs (purpose-built machines made only for mining), or by simply having lots of ETH for staking in the “Beacon Chain” of Ethereum. You can’t currently withdraw Beacon Chain staked ETH, so mining with computing power is currently the only way to go.
 
-Mining Ethereum is _very_ profitable right now. 1 ETH is worth about $1,000 right now, and it’s mainly mined by using GPUs or ASICs (purpose-built machines that can only do 1 thing, but they do that 1 thing blazing fast), or by simply having lots of ETH for staking in the “Beacon Chain” of Ethereum. You can’t currently withdraw Beacon Chain staked ETH, so mining with computing power is currently the only way.
+GPUs are affordable and considerably fast for mining Ethereum. Sure, ASICs are faster, but bang-for-buck wise GPUs are pretty good and already widely available (and cheap). The latest generation of graphics cards (especially the RTX 3060) are INCREDIBLE for mining, which is why they’ve been out of stock since launch.
 
-GPUs are affordable and considerably fast for mining Ethereum. Sure, ASICs are faster, but bang-for-buck wise GPUs are pretty good and already widely available (and cheap). The new Nvidia RTX 3000 series cards (especially the 3060) are INCREDIBLE for mining, which is why they’ve been out of stock for a whole month.
+I personally have a GTX 1660 SUPER, which is somewhat slow compared to the latest and greatest, but still very profitable if I decide to mine with it. Besides, I’m not using it all the time, so I may as well set it up to mine when I’m not using it anyway.
 
-I personally have a GTX 1660 SUPER, which is slow compared to the latest and greatest, but still very profitable if I decide to mine with it. Besides, I’m not using it all the time, so I may as well use it to mine when I’m not using it anyway.
-
-For this, I’m going to use a custom OS for easy control and maximum efficiency. I will be using [Hive OS](https://hiveos.farm?ref=263127) since it’s super easy to use and monitor. It monitors everything, from hashrate to power usage to fan speed, and can be accessed from your phone. This is only worth it if you’re going to be mining a lot, like leaving it on overnight or all day.
+For this, I’m going to use a custom OS for easy control and maximum efficiency. I will be using [Hive OS](https://hiveos.farm?ref=263127) since it’s super easy to use and monitor. It monitors everything, from hashrate to power usage to fan speed, and can be accessed from your phone.
 
 ## Setup
 
-First, we need a graphics card (duh). If it’s reasonably newish and can run the latest games on Medium or better, it’s probably profitable to mine. I have a GTX 1660 SUPER, but Radeon cards are often preferred for mining. Just use the one already installed in your PC and plug in any spare ones you might have lying around. You’ll also need a USB drive with at least 8GB of storage to boot HiveOS.
+First, we need a graphics card (duh). If it’s reasonably newish and can run the latest games on Medium or better, it’s probably profitable to mine. I have a GTX 1660 SUPER, but Radeon cards are often preferred for mining. Just use the one already installed in your PC and plug in any spare ones you might have lying around. You’ll also need a USB drive with at least 8GB of storage to boot HiveOS, or a partition on your hard drive.
 
 Second, we need to create [a HiveOS account](https://hiveos.farm?ref=263127), which is needed to use HiveOS. Click that link and create an account (it’s 100% free for 1 computer, or free for 3 more if you mine on their pool, which is... _ok_.)
 
@@ -35,7 +33,7 @@ It’s a bit confusing at first, but you’ll eventually learn what everything d
 
 Now, you’ll need to create a “Flight Sheet”. This is a profile that tells your computer what to mine, and how. Create a new Flight Sheet and enter Ethereum, your wallet, Etherpool, and whatever miner you want to use (I personally recommend T-Rex, it’s fast and feature filled). Enter a name if you want, and add the flight sheet. Finally, click the rocket next to the newly created flight sheet and apply it to your miner.
 
-You should now hear your GPU start up and mine. Great job, you’re now up and mining! But it’s not the most efficient or fast it can be. The expensive part of mining is the electricity cost, so you want to be as efficient as possible. Enter: overclocking and power limits.
+You should now hear your GPU start up and mine. Great job, you’re now up and mining! But it’s not the most efficient or fast it can be. The expensive part of mining is the electricity cost, so you want to be as efficient as possible. This is where overclocking and power limiting comes in.
 
 ## The Overclocking Part
 
@@ -49,10 +47,10 @@ For Ethash (the algorithm use to mine Ethereum), GPUs profit the most from a pow
 
 First, set a memory overclock. My GTX 1660 SUPER went up to 1300 while still being stable, but I’d recommend to start at 600 and increase by 200 until it becomes unstable, then reduce it by 100 until it’s stable again. Simply set an overclock, hit Apply, and wait 5 minutes to see if your miner crashes or has errors. If all is good, increase it until it crashes or errors, then decrease it until it’s all good again.
 
-After you find a good memory overclock, set a power limit. The minimum varies, so you should run “nvidia-info” or “radeon-info” on your rig to get the minimum wattage. For me, it was 70W, so I set the limit to 75W. T-Rex will tell you the hashes per watt efficiency. Higher is better, so tweak it a bit until you’re happy. I got up to 400 kilo hashes per watt, which is WAY better than when it was not overclocked at around 250 kilo hashes per watt.
+After you find a good memory overclock, set a power limit. The minimum varies, so you should run “nvidia-info” or “radeon-info” on your rig to get the minimum wattage. For me, it was 70W, so I set the limit to 75W. T-Rex ETH Miner will tell you the hashes per watt efficiency. Higher is better, so tweak it a bit until you’re happy. I got up to 400 kilo hashes per watt, which is WAY better than when it was not overclocked at around 250 kilo hashes per watt. Faster and more efficient? Yep, that's why overclocking is important.
 
-Once you’re all done with that, you can leave your miner be. I had mine turn off all the RGB stuff connected to it at startup, since I use it as a gaming computer.
+Once you’re all done with that, you can leave your miner be. I had mine turn off all the RGB stuff connected to it at startup using OpenRGB, since I mainly use it for gaming.
 
 You can monitor your miner with the HiveOS app, and see how much ETH has yet to be paid out through the Ethermine website. Ethermine will also give you a estimate of how much you can make every day, week, or month. It gives me an estimate of $2 every day or $60 every month.
 
-Now, if I leave it for 3 months, it will give me about what I paid for it, including electricity, which is great! A 100% return on investment within 3 months, and that’s if Ethereum stays at $1000. If Ethereum goes up in value, mining gets even more profitable.
+Now, if I leave it for 3 months, it will give me about what I paid for it, including electricity, which is great! A 100% return on investment within 4 months, and that’s if Ethereum stays at $3000. If Ethereum goes up in value, and you haven't sold it, mining gets even more profitable.
