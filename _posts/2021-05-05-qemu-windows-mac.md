@@ -21,18 +21,17 @@ Let's get started.
     <details>
         <summary>View optional build instructions</summary>
 
-    You can still build your own QEMU if you want, but you don't really need to anymore. You can just use the Homebrew binaries. You really should just skip this part.
-
-    Build QEMU with HV.F support
-
-    ```bash
-    brew install ninja pkgconfig glib pixman
-    wget https://download.qemu.org/qemu-6.2.0.tar.xz
-    tar xvJf qemu-6.2.0.tar.xz
-    cd qemu-6.2.0
-    ./configure
-    make
-    ```
+    You can still build your own QEMU if you want, but you don't really need to anymore. You can just use the Homebrew binaries. You really should just skip this part.<br>
+    Build QEMU with HV.F support<br>
+    <br>
+    brew install ninja pkgconfig glib pixman<br>
+    <!-- markdownlint-disable MD034 -->
+    wget https://download.qemu.org/qemu-6.2.0.tar.xz<br>
+    <!-- markdownlint-enable MD034 -->
+    tar xvJf qemu-6.2.0.tar.xz<br>
+    cd qemu-6.2.0<br>
+    ./configure<br>
+    make<br>
 
     </details>
 
