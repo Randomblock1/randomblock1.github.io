@@ -7,6 +7,8 @@ tags:
 ---
 M1 Macs don't have support for Bootcamp. So, in order to have a working Windows environment, you have to do it all in a virtual machine. The problem is that QEMU isn't optimized for M1 Macs, and virtualization is very slow... unless it uses MacOS' Hypervisor.Framework. While this isn't quite as performant as paid solutions (like Parallels), it works 'fast enough' and is completely free.
 
+Updated 1/6/22: Building your own QEMU is no longer needed. It's been merged into the main branch, woohoo! Just make sure your QEMU is up-to-date (6.2 or higher.)
+
 Let's get started.
 
 1. Prerequisites
@@ -16,24 +18,25 @@ Let's get started.
 2. Get Windows for ARM
 
     Go visit [the Windows for ARM download page](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewARM64) and sign in with a Microsoft account. Then, download the VHDX file.
+    <details>
+        <summary>View optional build instructions</summary>
 
-3. Build QEMU with HV.F support
+    You can still build your own QEMU if you want, but you don't really need to anymore. You can just use the Homebrew binaries. You really should just skip this part.
+
+    Build QEMU with HV.F support
 
     ```bash
     brew install ninja pkgconfig glib pixman
-    git clone https://github.com/qemu/qemu
-    cd qemu
-    git checkout v5.2.0
-    curl https://patchwork.kernel.org/series/418581/mbox/ | git apply --reject
-    mkdir build
-    cd build
-    ../configure --target-list=aarch64-softmmu --disable-gnutls
-    make -j8
-    sudo make install
-    sudo codesign --entitlements /path/to/qemu/accel/hvf/entitlements.plist --force -s - `which qemu-system-aarch64`
+    wget https://download.qemu.org/qemu-6.2.0.tar.xz
+    tar xvJf qemu-6.2.0.tar.xz
+    cd qemu-6.2.0
+    ./configure
+    make
     ```
 
-    Enable extra resolutions for ramfb
+    </details>
+
+3. Enable extra resolutions for ramfb
 
     ```bash
     curl -L https://git.io/J3w5c | tar xz
@@ -98,8 +101,9 @@ Let's get started.
     Run `chmod 755 start.sh && ./start.sh` to run Windows.
 
     When QEMU first starts up, select the window and press ESC before it starts booting.
+    This will make it boot into its BIOS so we can configure it.
 
-    Then, set your display resolution up to 1440x900 in Device Manager > OVMF Platform Configuration (or any other resolution you want to use). It's limited to a relatively small resolution, due to standard VGA for ARM64 not being supported, and having to use ramfb instead. This may change in the future, but we have to use ramfb for now.
+    Set your display resolution up to 1440x900 in Device Manager > OVMF Platform Configuration (or any other resolution you want to use). It's limited to a relatively small resolution, due to standard VGA for ARM64 not being supported, and having to use ramfb instead. This may change in the future, but we have to use ramfb for now.
 
     Save the settings, and select Reset in the main BIOS menu to test out your new resolution. Then, just set up Windows.
 
