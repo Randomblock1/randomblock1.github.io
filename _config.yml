@@ -131,10 +131,10 @@ collections:
     output: true
     permalink: /:collection/:path/
 
-#analytics:
-#  provider: "google-gtag"
-#  google:
-#    tracking_id: "UA-163381112-2"
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "UA-163381112-2"
 #comments:
 #  provider  : "staticman_v2"
 #  staticman:
