@@ -33,4 +33,4 @@ feature_row:
 
 {% include feature_row %}
 
-I also run a [link shortener](https://lnk2.page) and a [hastebin](https://paste.lnk2.page). Mainly so I can flex my custom domain.
+I also run a [link shortener](https://lnk2.page) and a [hastebin](https://paste.lnk2.page). Mainly so I can flex my [custom domains](https://jailbreak.today).
