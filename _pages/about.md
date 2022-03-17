@@ -3,27 +3,8 @@ permalink: /about/
 title: "About"
 ---
 
-I'm just a high school student who enjoys making simple, small things. You paid for your phone, so why can't you use it how you want?
+I'm just a high school student who enjoys learning to code.
 
-I'm also into cryptocurrency. Speaking of which, that's the only way to donate to me.
-
-You can also send to randomblock1.crypto if your wallet supports Unstoppable Domains.
-
-<details>
-  <summary>View addresses</summary>
-
-BTC  3FktLLGKKG6Qi1px1U7ADLURKTRwYcHy7q
-<br>
-BCH  1JrCxen5MLuUbtwch8dfJ3d6WWswVDqSWP
-<br>
-DOGE DSNthiejZjMvaLwXQFjCixSjaQsL199ySA
-<br>
-ETH  0x5288C85b1B24BF8Ed0fD445715D6AabF63Cf0A0b
-<br>
-LTC  MGS4jeGDWF1wQp4DwTtyw46nyWwArYutYy
-<br>
-<img src="https://bit.ly/39NvSSn" alt="Thank you!">
-</details>
-<br>
+If you'd like to support me, [here is my Cash app.](https://cash.app/$randomblock1)
 
 If you'd like to get in contact with me, visit [my Twitter](https://twitter.com/randomblock1_) or email me at [randomblock1@pm.me](mailto:randomblock1@pm.me)
