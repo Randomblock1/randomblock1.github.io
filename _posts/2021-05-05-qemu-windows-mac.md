@@ -8,6 +8,7 @@ tags:
 M1 Macs don't have support for Bootcamp. So, in order to have a working Windows environment, you have to do it all in a virtual machine. The problem is that QEMU isn't optimized for M1 Macs, and virtualization is very slow... unless it uses MacOS' Hypervisor.Framework. While this isn't quite as performant as paid solutions (like Parallels), it works 'fast enough' and is completely free.
 
 Updated 1/6/22: Building your own QEMU is no longer needed. It's been merged into the main branch, woohoo! Just make sure your QEMU is up-to-date (6.2 or higher.)
+{: .notice--info}
 
 Let's get started.
 
