@@ -5,6 +5,9 @@ categories:
 tags:
   - MacOS
 ---
+Update: This guide is no longer needed! Discord now has official M1 support, and it's much better than this workaround. As expected, performace and battery life on M1 Macs has greatly improved. Just download Discord from the official website.
+{: .notice--warning}
+
 Discord is an Electron app. Electron apps are super portable and can run on every platform without having to change any code. However, Discord's MacOS app doesn't support ARM64 (Apple M1) CPUs natively, which means it has to go through Apple's Rosetta 2, which allows x86_64 applications to run on ARM64 processors.
 
 This introduces some graphical bugs and massively slows down the application, which makes it less responsive and use more battery than it should. Discord has neglected to create a ARM64 version of their app even after [more than 8 months of M1 users asking](https://support.discord.com/hc/en-us/community/posts/360052558393-Discord-on-Apple-M1-Devices) for it, and probably won't do it for the forseeable future.
