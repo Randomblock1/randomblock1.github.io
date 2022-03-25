@@ -43,8 +43,4 @@ Thank you.
 
 I read [an interview with the Raspberry Pi CEO.](https://www.theverge.com/22966155/raspberry-pi-ceo-interview-eben-upton-computer-chip-shortage-diy) He said his goal was to make more people interested in learning computer science. If you're reading this: you have succeeded. That is mainly what prompted this blog post.
 
-Also, college status check:
-1. U of Michigan: Waiting for decision (really want their robotics degree)
-2. U of WI Madison: Accepted 🥳
-
 If you'd like to support me, the easiest way is to click that ad below. College is not cheap. (Or just send me money.)
