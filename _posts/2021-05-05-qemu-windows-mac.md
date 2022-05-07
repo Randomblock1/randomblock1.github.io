@@ -5,46 +5,50 @@ categories:
 tags:
   - MacOS
 ---
+
 M1 Macs don't have support for Bootcamp. So, in order to have a working Windows environment, you have to do it all in a virtual machine. The problem is that QEMU isn't optimized for M1 Macs, and virtualization is very slow... unless it uses MacOS' Hypervisor.Framework. While this isn't quite as performant as paid solutions (like Parallels), it works 'fast enough' and is completely free.
 
-Updated 1/6/22: Building your own QEMU is no longer needed. It's been merged into the main branch, woohoo! Just make sure your QEMU is up-to-date (6.2 or higher.)
+Updated 1/6/22: Building your own QEMU is no longer needed. It's been merged into the main branch, woohoo! Just make sure your QEMU version is 6.2 or higher.
 {: .notice--info}
 
 Let's get started.
 
 1. Prerequisites
+
     - M1 Mac
     - 32GB of Free Space
+    - QEMU 6.2 or higher
+
+    To install QEMU, install [Homebrew](https://brew.sh) and run `brew install qemu`.
 
 2. Get Windows for ARM
 
-    Go visit [the Windows for ARM download page](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewARM64) and sign in with a Microsoft account. Then, download the VHDX file.
-    <details>
-        <summary>View optional build instructions</summary>
+   Go visit [the Windows for ARM download page](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewARM64) and sign in with a Microsoft account. Then, download the VHDX file.
+   <details>
+   <summary>View old QEMU build instructions</summary>
 
-    You can still build your own QEMU if you want, but you don't really need to anymore. You can just use the Homebrew binaries. You really should just skip this part.<br>
-    Build QEMU with HV.F support<br>
-    <br>
-    brew install ninja pkgconfig glib pixman<br>
-    <!-- markdownlint-disable MD034 -->
-    wget https://download.qemu.org/qemu-6.2.0.tar.xz<br>
-    <!-- markdownlint-enable MD034 -->
-    tar xvJf qemu-6.2.0.tar.xz<br>
-    cd qemu-6.2.0<br>
-    ./configure<br>
-    make<br>
+   You can still build your own QEMU if you want, but you don't really need to anymore. You should just use the Homebrew binaries. Just skip this part.
 
-    </details>
+   Build QEMU with HV.F support
+
+       brew install ninja pkgconfig glib pixman
+       wget https://download.qemu.org/qemu-6.2.0.tar.xz
+       tar xvJf qemu-6.2.0.tar.xz
+       cd qemu-6.2.0
+       ./configure
+       make
+
+   </details>
 
 3. Enable extra resolutions for ramfb
 
-    ```bash
-    curl -L https://git.io/J3w5c | tar xz
-    dd if=/dev/zero of=pflash0.img bs=1m count=64
-    dd if=/dev/zero of=pflash1.img bs=1m count=64
-    dd if=QEMU_EFI.fd of=pflash0.img conv=notrunc
-    dd if=QEMU_VARS.fd of=pflash1.img conv=notrunc
-    ```
+    This lets us use higher resolutions at the cost of more RAM usage.
+
+       curl -L https://git.io/J3w5c | tar xz
+       dd if=/dev/zero of=pflash0.img bs=1m count=64
+       dd if=/dev/zero of=pflash1.img bs=1m count=64
+       dd if=QEMU_EFI.fd of=pflash0.img conv=notrunc
+       dd if=QEMU_VARS.fd of=pflash1.img conv=notrunc
 
 4. Make the QCOW2 disk file
 
@@ -76,25 +80,23 @@ Let's get started.
     Finally. It's time to get started.
     Use your favorite text editor to create start.sh:
 
-    ```bash
-    qemu-system-aarch64 \
-        -accel hvf \
-        -cpu host \
-        -smp 4 -m 2048 \
-        -M virt,highmem=off
-        -device qemu-xhci \
-        -device usb-kbd \
-        -device usb-tablet \
-        -drive file=disk.qcow2,if=none,id=windows \
-        -device nvme,drive=windows,serial="dummyserial" \
-        -nic user,model=virtio \
-        -drive file="virtio.iso",media=cdrom,if=none,id=drivers \
-        -device usb-storage,drive=drivers \
-        -monitor stdio \
-        -device ramfb \
-        -drive file=pflash0.img,format=raw,if=pflash,readonly=on \
-        -drive file=pflash1.img,format=raw,if=pflash \
-    ```
+       qemu-system-aarch64 \
+           -accel hvf \
+           -cpu host \
+           -smp 4 -m 2048 \
+           -M virt,highmem=off
+           -device qemu-xhci \
+           -device usb-kbd \
+           -device usb-tablet \
+           -drive file=disk.qcow2,if=none,id=windows \
+           -device nvme,drive=windows,serial="dummyserial" \
+           -nic user,model=virtio \
+           -drive file="virtio.iso",media=cdrom,if=none,id=drivers \
+           -device usb-storage,drive=drivers \
+           -monitor stdio \
+           -device ramfb \
+           -drive file=pflash0.img,format=raw,if=pflash,readonly=on \
+           -drive file=pflash1.img,format=raw,if=pflash \
 
 8. Set Up Windows
 
@@ -117,10 +119,8 @@ Let's get started.
 
     Right click 'Unknown device' then select Update Drivers>Browse my computer for drivers>D:\NetKVM\w10\ARM64. Click next to install the driver. Once that's done, shutdown, take a snapshot, and remove the following files from your start script:
 
-    ```bash
-    -drive file="virtio.iso",media=cdrom,if=none,id=drivers \
-    -device usb-storage,drive=drivers \
-    ```
+       -drive file="virtio.iso",media=cdrom,if=none,id=drivers \
+       -device usb-storage,drive=drivers \
 
 9. Optimize Windows (optional)
 
@@ -128,18 +128,16 @@ Let's get started.
 
     Open Command prompt and run:
 
-    ```bash
-    REM Disable Printing
-    sc stop "Spooler"
-    sc config "Spooler" start= disabled
-    REM Disable Automatic Defragmentation
-    schtasks /Delete /TN "\Microsoft\Windows\Defrag\ScheduledDefrag" /F
-    REM Disable Pagefile
-    wmic computersystem set AutomaticManagedPagefile=FALSE
-    wmic pagefileset delete
-    REM Disable Hibernation
-    powercfg -h off
-    ```
+       REM Disable Printing
+       sc stop "Spooler"
+       sc config "Spooler" start= disabled
+       REM Disable Automatic Defragmentation
+       schtasks /Delete /TN "\Microsoft\Windows\Defrag\ScheduledDefrag" /F
+       REM Disable Pagefile
+       wmic computersystem set AutomaticManagedPagefile=FALSE
+       wmic pagefileset delete
+       REM Disable Hibernation
+       powercfg -h off
 
     If you want to save some space, if you've taken a second snapshot of the fully set-up virtual machine, you can run
 
@@ -148,4 +146,4 @@ Let's get started.
     to delete the first snapshot.
 
 10. Done!
-    You're now done installing Windows 10 on your M1 Mac! It's not terribly fast, but it works well and is fast enough to do most things.
+    You're now done installing Windows 10 on your M1 Mac! It's not as fast as Parallels Desktop, but it works well and is fast enough to do most things. It also doesn't cost $100.
