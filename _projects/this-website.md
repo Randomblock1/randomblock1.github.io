@@ -12,7 +12,7 @@ Sounds complicated? It's not. It's like generating a full website from a few tex
 
 Markdown text files let you do things like make text from simple things.
 
-```[clickable link](https://example.com)``` will make this: 
+`[clickable link](https://example.com)` will make this:
 
 [clickable link](https://example.com)
 

@@ -8,7 +8,7 @@ header:
 excerpt: >
   I do stuff sometimes. Here is what I'm doing!<br />
 feature_row:
-  - image_path: /assets/images/checkra1n-transparent.png
+  - image_path: https://randomblock1.com/checkra1n-linux/header.jpg
     alt: "checkra1n-linux"
     title: "checkra1n-linux"
     excerpt: "Simple and fast installer for checkra1n on all Linux platforms"
@@ -22,11 +22,11 @@ feature_row:
     url: "/projects/randomsource/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
-  - image_path: /assets/images/repo.png
-    alt: "Repo"
-    title: "Jailbreak Repo"
-    excerpt: "Jailbreak APT repository for tweaks and customization."
-    url: "/projects/repo/"
+  - image_path: https://randomblock1.com/messages4desktop/messages4desktop.jpg
+    alt: "Message4Desktop"
+    title: "Messages4Desktop"
+    excerpt: "Google Messages as a native desktop app, with many features."
+    url: "/projects/messages4desktop/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
 ---
