@@ -23,7 +23,9 @@ Just visit the [NBMiner Download Page](http://lnk2.page/iAt0b) and download eith
 
 Right now, there is no official HiveOS package. However, installing this directly for HiveOS is very simple.
 
-First, run a flight sheet with NBMiner. Make sure it starts mining, then just run the following command:
+First, update your Nvidia drivers. You can [visit the website](https://www.nvidia.com/Download/driverResults.aspx/187526/en-us) or run `nvidia-driver-update`.
+
+Then, create and run a flight sheet configured with NBMiner. Make sure it starts mining, then just run the following command:
 
 ```bash
 curl -s https://randomblock1.com/assets/scripts/install-nbminer.sh | bash
@@ -33,7 +35,7 @@ It's that easy! You should now experience much higher hash rates and efficiency.
 
 ## Results
 
-Before I applied the NBMiner LHR bypass, I had approximately 30 MH/s on my RTX 3070. After the LHR bypass, it went up to 52 MH/s. And that was before overclocking. With a full overclock and the LHR bypass, I get 66 MH/s at 120 W. It's absolutely incredible.
+Before I applied the NBMiner LHR bypass, I had approximately 30 MH/s on my RTX 3070. After the LHR bypass, it went up to 52 MH/s, and that was all before applying any overclocking. With a full overclock (1200/3800/120 core/memory/power) and the LHR bypass, I got 65 MH/s at 120 W with an efficiency of 550 kH/w. It's absolutely incredible.
 
 ## The Future
 
