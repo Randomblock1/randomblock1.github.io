@@ -6,7 +6,7 @@ tags:
   - Linux
   - Raspberry Pi
 ---
-You might not know this, but Windows 10 is in fact completely compatible with ARM64. ARM architectutures are very power-efficient, which makes them perfect for mobile devices, including laptops. There is a version of Windows that can run on ARM64, but it's not easy to download. However, once you have an ISO, you can run Windows 10 on a Raspberry Pi 3/4 at near-native speed.
+You might not know this, but Windows 10 is in fact completely compatible with ARM64. ARM architectures are very power-efficient, which makes them perfect for mobile devices, including laptops. There is a version of Windows that can run on ARM64, but it's not easy to download. However, once you have an ISO, you can run Windows 10 on a Raspberry Pi 3/4 at near-native speed.
 
 Let's get started.
 
@@ -23,7 +23,7 @@ Let's get started.
 3. Make the newest QEMU (optional)
 
     To make sure you get the newest features and bugfixes, compile QEMU from tbe latest source. Visit [the QEMU download page](https://www.qemu.org/download/) and and follow the build instructions under the Source tab. You'll want to uninstall your distribution's QEMU packages and run `sudo make install` once you're done building QEMU.
-    However, this isn't neccessary and most QEMU versions should still work.
+    However, this isn't necessary and most QEMU versions should still work.
 
 4. Make the QCOW2 disk file
 
