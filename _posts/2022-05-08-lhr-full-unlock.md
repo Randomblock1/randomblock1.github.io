@@ -6,7 +6,7 @@ tags:
   - Cryptocurrency
 ---
 
-You heard that right. You can nearly double your hashrate with minimal effort, and increase efficiency. Just download a miner, it's that easy.
+You heard that right. You can nearly double your hashrate with minimal effort, and increase efficiency. Just download a miner, it's that easy. haha gpu go brrrr
 
 NOTE: this guide does not work if you have LHRv3 (3050 and 3080 12GB) GPUs but will work on LHRv1/2 cards. Chances are, your card is compatible.
 {: .notice--warning}
@@ -39,7 +39,7 @@ It's that easy! You should now experience much higher hash rates and efficiency.
 
 ## Results
 
-Before I applied the NBMiner LHR bypass, I had approximately 30 MH/s on my RTX 3070. After the LHR bypass, it went up to 52 MH/s, and that was all before applying any overclocking. With a full overclock (1200/3800/120 core/memory/power) and the LHR bypass, I got 65 MH/s at 120 W with an efficiency of 550 kH/w. It's absolutely incredible.
+Before I applied the NBMiner LHR bypass, I had approximately 30 MH/s on my RTX 3070. After the LHR bypass, it went up to 52 MH/s, and that was all before applying any overclocking. With a full overclock (1200/3700/120 core/memory/power) and the LHR bypass, I got 64 MH/s at 120 W with an efficiency of 550 kH/w. It's absolutely incredible.
 
 ## The Future
 
