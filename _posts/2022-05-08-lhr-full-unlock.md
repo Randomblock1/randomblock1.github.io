@@ -6,7 +6,9 @@ tags:
   - Cryptocurrency
 ---
 
-NOTE: this guide does not work if you have LHRv3 (3050 and 3080 12GB) but will work on LHRv1/2 cards. If you're not sure just try it, it will fall back to a partial bypass.
+You heard that right. You can nearly double your hashrate with minimal effort, and increase efficiency. Just download a miner, it's that easy.
+
+NOTE: this guide does not work if you have LHRv3 (3050 and 3080 12GB) GPUs but will work on LHRv1/2 cards. Chances are, your card is compatible.
 {: .notice--warning}
 
 ## Wait, what?
@@ -23,13 +25,15 @@ Just visit the [NBMiner Download Page](http://lnk2.page/iAt0b) and download eith
 
 Right now, there is no official HiveOS package. However, installing this directly for HiveOS is very simple.
 
-First, update your Nvidia drivers. You can [visit the website](https://www.nvidia.com/Download/driverResults.aspx/187526/en-us) or run `nvidia-driver-update`.
+First, update your Nvidia drivers. You can [visit the website](https://www.nvidia.com/Download/driverResults.aspx/187526/en-us) or run `nvidia-driver-update`. Downloading from NVIDIA is much faster, so I recommend that. Then just run `nvidia-driver-update DRIVER_YOU_DOWNLOADED.run`, and HiveOS will take care of the rest.
 
-Then, create and run a flight sheet configured with NBMiner. Make sure it starts mining, then just run the following command:
+Once you're all done with that, log into your web interface and create and run a flight sheet configured with NBMiner. Make sure it starts mining, then just run the following command:
 
 ```bash
 curl -s https://randomblock1.com/assets/scripts/install-nbminer.sh | bash
 ```
+
+It will download NBMiner 41 (the version with the full LHR bypass) and replace your old miner version with this new one. It will also restart your miner for you.
 
 It's that easy! You should now experience much higher hash rates and efficiency. This article will be updated as more mining tools gain LHR bypasses. Personally, my favorite is T-Rex miner, but I'm happy as long as I get higher hash rates.
 
@@ -40,3 +44,5 @@ Before I applied the NBMiner LHR bypass, I had approximately 30 MH/s on my RTX 3
 ## The Future
 
 While this is great and all, Eth 2.0 is coming quite soon, and it will switch ETH from Proof of Work to Proof of Stake. So if you mine Ethereum for a living, I wouldn't go out and buy LHR cards. Unless you want to mine some other coin like Conflux, which is actually quite profitable (I mined this when I got a LHR card).
+
+Additionally, as more people download and use the LHR bypass, the [ETH Network difficulty](https://2miners.com/eth-network-difficulty) will probably increase, meaning you'll earn less per hash. That shouldn't be too much of a concern, though, because more hashes still means more shares.
