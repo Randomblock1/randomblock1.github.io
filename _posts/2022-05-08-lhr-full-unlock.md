@@ -6,7 +6,7 @@ tags:
   - Cryptocurrency
 ---
 
-You heard that right. You can nearly double your hashrate with minimal effort, and increase efficiency. Just download a miner, it's that easy. haha gpu go brrrr
+You heard that right. You can nearly double your hashrate with minimal effort, and increase efficiency. Just download a miner, it's that easy. This quick guide is meant to get you mining ASAP.
 
 NOTE: this guide does not work if you have LHRv3 (3050 and 3080 12GB) GPUs but will work on LHRv1/2 cards. Chances are, your card is compatible.
 {: .notice--warning}
