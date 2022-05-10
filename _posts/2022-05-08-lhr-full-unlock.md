@@ -8,14 +8,18 @@ tags:
 
 You heard that right. You can nearly double your hashrate with minimal effort, and increase efficiency. Just download a miner, it's that easy. This quick guide is meant to get you mining ASAP.
 
-NOTE: this guide does not work if you have LHRv3 (3050 and 3080 12GB) GPUs but will work on LHRv1/2 cards. Chances are, your card is compatible.
+NOTE: See [this](#lhrv3) if you have a LHRv3 (3050 and 3080 12GB) GPU. Not 100% unlocked, but close enough.
 {: .notice--warning}
 
 ## Wait, what?
 
-Yesterday, May 7, [NiceHash announced they have unlocked LHR cards](https://lnk2.page/ig5li) with their own QuickMiner software. While nobody except them knows how, it's very likely that [the NVIDIA Lapsus$ hack](https://lnk2.page/PGbRq) and [NVIDIA's leaked source code](https://lnk2.page/nvleak1) helped them reverse-engineer a bypass. They haven't said anything on the matter, but that's the most likely explanation.
+On May 7, [NiceHash announced they have unlocked LHR cards](https://lnk2.page/ig5li) with their own QuickMiner software. While nobody except them knows how, it's very likely that [the NVIDIA Lapsus$ hack](https://lnk2.page/PGbRq) and [NVIDIA's leaked source code](https://lnk2.page/nvleak1) helped them reverse-engineer a bypass. They haven't said anything on the matter, but that's the most likely explanation.
 
-However, the QuickMiner software is only available on Windows, and most miners prefer Linux because it is more stable, customizable, and better for overclocking. Today, [NBMiner released their LHR bypass](https://lnk2.page/iAt0b), and it is available for both [Windows](https://lnk2.page/7uUE8) and [Linux](https://lnk2.page/lhr).
+However, the QuickMiner software is only available on Windows, and most miners prefer Linux because it is more stable, customizable, and better for overclocking. On May 8, [NBMiner released their LHR bypass](https://lnk2.page/iAt0b), and it is available for both [Windows](https://lnk2.page/7uUE8) and [Linux](https://lnk2.page/lhr).
+
+On May 10, T-Rex began testing a new LHR-unlocked version, but it hasn't been officially released yet due to stability concerns.
+
+Currently, NBMiner is the most stable miner right now with the best support for LHR unlocking, but as miner developers continue to work on cracking LHR, this is likely to change or even out.
 
 ## Install without HiveOS
 
@@ -23,19 +27,23 @@ Just visit the [NBMiner Download Page](http://lnk2.page/iAt0b) and download eith
 
 ## Install for HiveOS
 
-Right now, there is no official HiveOS package. However, installing this directly for HiveOS is very simple.
+HiveOS already has built-in support for the unlocked NBMiner and T-Rex bypass. Currently, NBMiner is more stable, but T-Rex will become stable within a few days.
 
 First, update your Nvidia drivers. You can [visit the website](https://www.nvidia.com/Download/driverResults.aspx/187526/en-us) or run `nvidia-driver-update`. Downloading from NVIDIA is much faster, so I recommend that. Then just run `nvidia-driver-update DRIVER_YOU_DOWNLOADED.run`, and HiveOS will take care of the rest.
 
-Once you're all done with that, log into your web interface and create and run a flight sheet configured with NBMiner. Make sure it starts mining, then just run the following command:
+Once you're all done with that, log into your web interface and run a flight sheet with NBMiner or T-Rex (selecting the beta version). Launch it, and watch your hash rate rise.
+
+It's that easy! You should now experience much higher hash rates and efficiency. This article will be updated as more mining tools gain LHR bypasses. Personally, my favorite is T-Rex miner, but I'm happy as long as I get higher hash rates.
+
+## LHRv3
+
+NBMiner 41.4 adds support for 90% unlocking LHRv3 cards. All you need to do is create an NBMiner flight sheet, launch it, and then run the following command:
 
 ```bash
 curl -s https://randomblock1.com/assets/scripts/install-nbminer.sh | bash
 ```
 
-It will download NBMiner 41 (the version with the full LHR bypass) and replace your old miner version with this new one. It will also restart your miner for you.
-
-It's that easy! You should now experience much higher hash rates and efficiency. This article will be updated as more mining tools gain LHR bypasses. Personally, my favorite is T-Rex miner, but I'm happy as long as I get higher hash rates.
+You should join [NBMiner's discord](https://discord.gg/ZMejVXj) to try out new beta releases that may improve stability and speed.
 
 ## Results
 
