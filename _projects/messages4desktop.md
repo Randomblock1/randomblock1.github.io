@@ -9,7 +9,7 @@ permalink: /projects/messages4desktop/
 ![platforms](https://img.shields.io/badge/platforms-windows%20%7C%20linux%20%7C%20macos-blue)
 [![download](https://img.shields.io/badge/download-latest%20build-brightgreen)](https://github.com/Randomblock1/messages4desktop/releases)
 
-![messages4desktop](messages4desktop.jpg)
+![messages4desktop](https://github.com/Randomblock1/messages4desktop/raw/master/messages4desktop.jpg)
 
 Uses Nativefier to build Google Messages as a standalone desktop app, complete with notifications, badges, and the like.
 
