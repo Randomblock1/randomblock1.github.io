@@ -17,6 +17,7 @@ Let's get started.
 
     - M1 Mac
     - 32GB of Free Space
+    - Xcode or Xcode Command Line Tools (run `xcode-select --install` to install)
     - QEMU 6.2 or higher
 
     To install QEMU, install [Homebrew](https://brew.sh) and run `brew install qemu`.
