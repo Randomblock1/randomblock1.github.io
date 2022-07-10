@@ -35,3 +35,5 @@ Here's it explained for you in a simple diagram:
 ```
 
 Note that this will not ask you for your Touch ID when you SSH into your MacBook, because that wouldn't make any sense. You will still have to enter your password then.
+
+Additionally, you will have to repeat these steps any time you update MacOS, because it gets overwritten every time. _A small price to pay for salvation._
