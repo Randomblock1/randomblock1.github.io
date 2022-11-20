@@ -17,6 +17,8 @@ Just open up `/Library/LaunchAgents/com.paloaltonetworks.gp.pangpa.plist` and yo
 </dict>
 ```
 
+You'll also need to edit `/Library/LaunchDaemons/com.paloaltonetworks.gp.pangpsd.plist` and disable its RunAtLoad.
+
 You're done! The GlobalProtect app will no longer launch itself, and you can quit it without it relaunching itself. One thing to note is that GlobalProtect actually uses 2 services: PanGPA (the GUI app) and PanGPS (the backend service). If you want, you can disable PanGPS's RunAtLoad as well, but you'll have to start it with `launchctl load /Library/LaunchAgents/com.paloaltonetworks.gp.pangps.plist` every time you want to use GlobalProtect, since it will only start PanGPA.
 
 If you want to quit either service from the terminal, you can run `launchctl unload <PATH TO PLIST>`, otherwise you can just use Activity Monitor (make sure it's set to All Processes in the View menu). They're listed as "PanGPS" and "GlobalProtect".
