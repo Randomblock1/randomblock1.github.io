@@ -27,7 +27,7 @@ repository: "randomblock1/randomblock1.github.io"
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
 # Outputting
-permalink: /:categories/:title/
+permalink: /:categories/:title
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: America/Chicago # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -58,34 +58,32 @@ plugins:
   - jekyll-seo-tag
 
 author:
-  name   : "Randomblock1"
-  avatar : "/assets/images/profile-icon.jpg"
-  bio    : "I do stuff sometimes"
+  name: "Randomblock1"
+  avatar: "/assets/images/profile-icon.jpg"
+  bio: "I do stuff sometimes"
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://randomblock1.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/randomblock1_"
+    - label: "Mastodon"
+      icon: "fab fa-fw fa-mastodon"
+      url: "https://mastodon.social/@Randomblock1"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/randomblock1"
-#    - label: "Instagram"
-#      icon: "fab fa-fw fa-instagram"
-#      url: "https://instagram.com/"
 
 footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/randomblock1_"
+    - label: "Mastodon"
+      icon: "fab fa-fw fa-mastodon"
+      url: "https://mastodon.social/@Randomblock1"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/randomblock1"
-#    - label: "Instagram"
-#      icon: "fab fa-fw fa-instagram"
-#      url: "https://instagram.com/"
+
 
 defaults:
   # _posts
@@ -106,14 +104,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _projects
-  - scope:
-      path: ""
-      type: projects
-    values:
-      layout: single
-      author_profile: true
-      share: true
 
 category_archive:
   type: liquid
@@ -126,18 +116,12 @@ compress_html:
   clippings: all
   profile: false
 
-collections:
-  projects:
-    output: true
-    permalink: /:collection/:path/
-
 analytics:
   provider: "google-gtag"
   google:
     tracking_id: "UA-163381112-2"
-    
+
 comments:
   provider: "disqus"
   disqus:
     shortname: "randomblock1"
-

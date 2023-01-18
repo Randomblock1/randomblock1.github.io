@@ -3,8 +3,8 @@ permalink: /about/
 title: "About"
 ---
 
-I'm just a high school student who enjoys learning to code.
+I'm a Computer Science student at the University of Wisconsin-Madison. I enjoy programming and learning about new technologies.
 
-<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#00adb5', 'A0A5284T4');kofiwidget2.draw();</script> 
+If you'd like to get in contact with me, email me at [randomblock1@pm.me](mailto:randomblock1@pm.me).
 
-If you'd like to get in contact with me, visit [my Twitter](https://twitter.com/randomblock1_) or email me at [randomblock1@pm.me](mailto:randomblock1@pm.me)
+If you're a recruiter, please send summer internships my way!
