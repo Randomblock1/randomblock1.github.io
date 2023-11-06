@@ -14,11 +14,9 @@ feature_row:
     url: "/caffeinate2/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
-  - image_path: /assets/images/messages4desktop.png
-    alt: "Message4Desktop"
-    title: "Messages4Desktop"
-    excerpt: "Google Messages as a native desktop app."
-    url: "/messages4desktop/"
+-   title: "PDFCrypt"
+    excerpt: "Encrypt PDFs securely on your computer, for free."
+    url: "/pdfcrypt/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: /assets/images/checkra1n-linux.png
