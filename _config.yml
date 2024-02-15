@@ -64,7 +64,7 @@ plugins:
 author:
   name: "Randomblock1"
   avatar: "/assets/images/profile-icon.jpg"
-  bio: "I'm a programmer, tech enthusiast, and a Computer Science student. I like to write about programming, tech, and other stuff."
+  bio: "Computer science student & software engineer."
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
