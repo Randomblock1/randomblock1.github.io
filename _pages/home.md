@@ -5,7 +5,7 @@ hidden: true
 header:
   overlay_color: "#5e616c"
   overlay_image: /assets/images/home-header.jpg
-excerpt: Computer Science @ UW Madison
+excerpt: Tech Alchemy
 feature_row:
   - image_path: /assets/images/caffeinate2.svg
     alt: "caffeinate2"
