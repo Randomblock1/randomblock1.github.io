@@ -14,7 +14,9 @@ feature_row:
     url: "/caffeinate2/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
-  - title: "PDFCrypt"
+  - image_path: /assets/images/pdfcrypt.svg
+    alt: "PDFCrypt"
+    title: "PDFCrypt"
     excerpt: "Encrypt PDFs securely on your computer, for free."
     url: "/pdfcrypt/"
     btn_class: "btn--primary"
