@@ -17,7 +17,7 @@ feature_row:
   - image_path: /assets/images/pdfcrypt.svg
     alt: "PDFCrypt"
     title: "PDFCrypt"
-    excerpt: "Encrypt PDFs securely on your computer, for free."
+    excerpt: "Encrypt PDFs securely in your browser, for free."
     url: "/pdfcrypt/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
