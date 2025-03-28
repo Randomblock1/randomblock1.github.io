@@ -20,19 +20,19 @@ There's something pretty interesting about this PCB. Can you spot it?
 
 Yep, there are WAY more contacts on the PCB than there are actual buttons on the remote.
 
-![close up of board](/assets/images/img2.jpg)
+![board and front sticker](/assets/images/img3.jpg)
 
 And you can actually see that the PCB traces are actually there, so they must actually do something... Activating them at my fan does (mostly) nothing, and I have a theory why, but we'll get to that later.
 
 Anyway, let's take a look at the back...
 
-![board and front sticker](/assets/images/img3.jpg)
+![close up of board](/assets/images/img2.jpg)
 
-The only thing of note on there is the AD009-01T IR controller, which is to be expected. Looking at the datasheet doesn't give me the protocol specifications or carrier frequency, but it does tell me pin 15 is the IR output (which was already quite obvious from the PCB). I could probably attach my logic analyzer to pin 15 and manually decode signals, but I'd rather hook up an IR receiver to the ESP32 so it can decode the commands for me.
+The only thing of note on there is the AD009-01T IR controller, which is to be expected. Looking at the datasheet doesn't give me the protocol specifications or carrier frequency (which is another good sign it's probably NEC), but it does tell me pin 15 is the IR output (which was already quite obvious from the PCB). I could probably attach my logic analyzer to pin 15 and manually decode signals, but I'd rather hook up an IR receiver to it so I can get rid of any PWM noise that may complicate things.
 
 ## Reverse-Engineering the IR Signals
 
-I decided to start off by assuming it's using the NEC protocol with a carrier frequency of 38 KHz. It's just the most common protocol IR remotes use, and I didn't see a particular reason why they'd go for anything else. So I wired up an IR receiver to the logic analyzer and used an old ESP8266 as a 3.3V power source.
+I decided to start off by assuming it's using the NEC protocol with a carrier frequency of 38 KHz. It's the most common protocol IR remotes use, and I didn't see a particular reason why they'd go for anything else. So I wired up an IR receiver to the logic analyzer and used an old ESP8266 as a 3.3V power source.
 
 ![IR reciever attached to esp8266](/assets/images/img4.jpg)
 
@@ -50,7 +50,7 @@ Reversing the bits so that the most significant bit is first (the norm for most 
 
 `10000000 11011110 00010100 11101011`
 
-...or `0x80DE14EB` for short. If it's using the original NEC protocol, the second byte should be the logical NOT of the first, but it's not! Which doesn't really change anything, because the Extended NEC protocol changes the form to `ADDR[1], ADDR[0], CMD, NOT CMD` . This lets us makes sense of this data in hex:
+...or `0x80DE14EB` for short. If it's using the original NEC protocol, the second byte should be the logical NOT of the first, but it's not! Which is actually completely normal, because the Extended NEC protocol changes the form to `ADDR[1], ADDR[0], CMD, NOT CMD` to support more devices and reduce address collisions. This lets us makes sense of this data in hex:
 
 `ADDR[1] = 0x80`
 `ADDR[0] = 0xDE`
@@ -69,7 +69,7 @@ Yay! That's a valid Extended NEC code. The addresses are also organized from lea
 | 0x10     | 0x11     | 0x12     |
 | 0x14     | 0x15     | 0x16     |
 
-These can be pretty easily mapped to the sticker buttons:
+There's a pretty clear pattern. These can be pretty easily mapped to the sticker buttons:
 
 | Command | Description            |
 | ------- | ---------------------- |
@@ -88,7 +88,7 @@ Oh yeah, there's an emergency stop. This isn't usually accessible on the remote,
 
 ## Make It Smart with ESPHome
 
-ESPHome is software for ESP32, ESP8266, and RP2040 that can control & send data to Home Assistant. It can log temperature & humidity data which I can then access on my phone, and it can give me a button to activate the fan. Home Assistant has automations which will let me turn on the fan or turn it off when the temperature reaches a certain point, too. But first, we need to load ESPHome onto the microcontroller. ESPHome uses a configuration YAML file to figure out which features to enable and how, so here's the one that I used:
+ESPHome is firmware for ESP32, ESP8266, and RP2040 that can control & send data to Home Assistant. Using it, we can log temperature & humidity data from an attached sensor, which I can then access on my phone, and it can give me a button to activate the fan by controlling an IR LED. Home Assistant has automations which will let me turn on the fan or turn it off when the temperature reaches a certain point, too. But first, we need to load ESPHome onto the microcontroller. ESPHome uses a configuration YAML file to figure out which features to enable and how, so here's the one that I used:
 
 ```yaml
 esphome:
@@ -239,4 +239,4 @@ I made some automations to turn the fan on or off based on the temperature, and 
 
 It works reasonably well, except for the fact that it's a jumbled mess of wires precariously taped to my wall. Not to be outdone by gravity, me suddenly tripping and disconnecting everything, or a sudden need to borrow jumper wires, I've designed and ordered a PCB that connects everything together nicely. It also uses a cheaper and smaller ESP32 design that can be found on AliExpress for only $2.
 
-Join me next time as I learn to use KiCad and figure out if I can skip the IR sensor entirely and stuff this thing inside my fan.
+Join me next time as I learn to use KiCad and figure out if I can design a carrier PCB for the sensors and microcontroller or skip the IR entirely and stuff this thing inside my fan. (Probably not that last part, I don't think I want to mess with high voltage).
