@@ -20,7 +20,7 @@ feature_row:
     excerpt: "Encrypt PDFs securely in your browser, for free."
     url: "/pdfcrypt/"
     btn_class: "btn--primary"
-    btn_label: "Learn more"
+    btn_label: "Use now"
   - image_path: /assets/images/checkra1n-linux.png
     alt: "checkra1n-linux"
     title: "checkra1n-linux"
