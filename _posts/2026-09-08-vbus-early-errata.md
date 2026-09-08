@@ -1,4 +1,4 @@
---
+---
 title: "Pi 5 / CM5 Errata: USB VBUS up before host ready"
 categories:
   - blog
